@@ -12,8 +12,8 @@ namespace AdventofCode._2024
 {
     public class Day1HistorianHysteria
     {
-        List<int> list1 = new List<int>();
-        List<int> list2 = new List<int>();
+         List<int> list1 = new List<int>();
+         List<int> list2 = new List<int>();
         static string filePath2 = @"..\..\..\2024\Data\InputDay1.txt";
 
         public (List<int>, List<int>) getDataToList()
@@ -75,5 +75,18 @@ namespace AdventofCode._2024
             return diverence;
         }
 
+
+        public void SimilarityScore()
+        {
+            var (l1, l2) = getDataToList();
+            //var l1 = new List<int>() { 3, 4, 2, 1, 3, 3 };
+            //var l2 = new List<int>() { 4, 3, 5, 3, 9, 3 };
+            var score_increases = 0;
+            for (int i = 0; i < l1.Count(); i++)
+            {
+                score_increases += l1[i] * l2.FindAll(x => x.Equals(l1[i])).Count();
+            }
+            Console.Write($" What is their similarity score? {score_increases}");
+        }
     }
 }
