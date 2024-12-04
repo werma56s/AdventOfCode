@@ -12,8 +12,8 @@ namespace AdventofCode._2024
 {
     public class Day1HistorianHysteria
     {
-        List<int> list1 = new List<int>();
-        List<int> list2 = new List<int>();
+         List<int> list1 = new List<int>();
+         List<int> list2 = new List<int>();
         static string filePath2 = @"..\..\..\2024\Data\InputDay1.txt";
 
         public (List<int>, List<int>) getDataToList()
